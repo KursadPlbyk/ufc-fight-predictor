@@ -21,6 +21,7 @@ def load_historical_data(file_path):
         print(f"Error loading data from {file_path}: {e}")
         return None
 
+
 def clean_data(raw_df):
     """
     Clean the raw historical fight data.
