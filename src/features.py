@@ -55,6 +55,14 @@ def engineer_features(file_path):
     # De-bias fighter order (f_1 is the winner 100% of the time otherwise)
     cleaned_data = debias_fighter_order(cleaned_data)
 
+    event_date = pd.to_datetime(cleaned_data['event_date'])
+    f1_dob = pd.to_datetime(cleaned_data['f_1_fighter_dob'])
+    f2_dob = pd.to_datetime(cleaned_data['f_2_fighter_dob'])
+
+    age_f1 = (event_date - f1_dob).dt.days / 365.25
+    age_f2 = (event_date - f2_dob).dt.days / 365.25
+    age_diff = age_f1 - age_f2
+
     total_fights_f1 = cleaned_data['f_1_fighter_w'] + cleaned_data['f_1_fighter_l'] + cleaned_data['f_1_fighter_d']
     total_fights_f2 = cleaned_data['f_2_fighter_w'] + cleaned_data['f_2_fighter_l'] + cleaned_data['f_2_fighter_d']
 
@@ -100,6 +108,9 @@ def engineer_features(file_path):
     cleaned_data['sub_avg_diff'] = sub_avg_diff
     cleaned_data['reach_diff'] = reach_diff
     cleaned_data['height_diff'] = height_diff
+    cleaned_data['age_f1'] = age_f1
+    cleaned_data['age_f2'] = age_f2
+    cleaned_data['age_diff'] = age_diff
     cleaned_data['target'] = (cleaned_data['winner'] == cleaned_data['f_1_name']).astype(int)
 
 

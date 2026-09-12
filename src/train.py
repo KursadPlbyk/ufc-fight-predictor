@@ -19,9 +19,10 @@ def load_features(file_path):
     """
     try:
         features = pd.read_csv(file_path)
-        X = features[['total_fights_f1', 'total_fights_f2', 'win_ratio_f1', 'win_ratio_f2', 
+        X = features[['total_fights_f1', 'total_fights_f2', 'experience_diff', 'win_ratio_f1', 'win_ratio_f2',
                      'win_ratio_diff', 'slpm_diff', 'str_acc_diff', 'sapm_diff', 'str_def_diff', 'td_avg_diff'
-                     , 'td_acc_diff', 'td_def_diff', 'sub_avg_diff', 'reach_diff', 'height_diff']]
+                     , 'td_acc_diff', 'td_def_diff', 'sub_avg_diff', 'reach_diff', 'height_diff',
+                     'age_f1', 'age_f2', 'age_diff']]
 
         y = features['target']
 
@@ -177,7 +178,7 @@ if __name__ == "__main__":
     else:
         best_model = model2
         best_model_name = "XGBoost"
-        best_metrics = metrics2 
+        best_metrics = metrics2
         print(f"Since XGBoost-Accuracy = {metrics2['accuracy']:.4f} >= RandomForest-Accuracy = {metrics1['accuracy']:.4f}, XGBoost is the best model.\n")
 
     print("Saving the best model...\n")
