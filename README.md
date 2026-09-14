@@ -72,7 +72,22 @@ Any two fighter names that exist on ufcstats.com work, including matchups that c
 
 ## Model performance
 
-The best model (RandomForest, 200 trees) reaches **~71.8% test accuracy**, meaningfully better than the 50% coin-flip baseline, though nowhere near 90%+. That's not a shortcoming of the modeling: MMA has high inherent variance (a single strike, a bad scorecard, an injury can flip a fight), and even professional betting markets, with access to far more information, don't do dramatically better on competitive matchups. XGBoost trailed slightly (~70.1%) in the final comparison.
+The best model (RandomForest, 200 trees) reaches **~71.8% test accuracy**, meaningfully better than the 50% coin-flip baseline, though nowhere near 90%+. That's not a shortcoming of the modeling: MMA has high inherent variance (a single strike, a bad scorecard, an injury can flip a fight), and even professional betting markets, with access to far more information, don't do dramatically better on competitive matchups.
+
+### Evaluation metrics
+
+Both models were evaluated on the same held-out 20% test split (never seen during training):
+
+| Metric | RandomForest | XGBoost |
+|---|---|---|
+| Accuracy | **71.78%** | 70.11% |
+| Precision | 71.58% | 69.30% |
+| Recall | 71.50% | 71.38% |
+| F1-Score | 71.54% | 70.32% |
+
+RandomForest was chosen because it has the higher **accuracy**, but the choice of metric mattered less here than it often does: precision, recall, and F1 all land within about a percentage point of accuracy for both models, so every metric tells the same story. RandomForest is consistently a bit ahead, not just on the one score used to decide.
+
+**Why accuracy, specifically, is a reasonable metric to decide on here:** Precision and recall trade off against each other by design. Optimizing for one usually costs the other, so which one "matters more" depends on whether false positives or false negatives are more costly for the task. That's true for something like medical screening (missing a real case is worse than a false alarm), but not here: predicting "Fighter A wins" when Fighter B actually wins isn't inherently worse than the reverse mistake, both outcomes are symmetric, equally important, and equally likely a priori (the target is close to 50/50 by design, thanks to `debias_fighter_order()`). With no class imbalance and no asymmetric cost between the two error types, plain accuracy, the overall fraction of correct predictions, is a fair, simple, and easy-to-interpret way to compare the models, without needing to justify weighting one kind of mistake over the other.
 
 The strongest individual predictor by a clear margin is career **win ratio difference**, followed by striking output and defensive stats. Physical measurements (height, reach, weight) matter least in training, as expected, since real fights are matched within one weight class, so those differences are usually small between opponents. See the exploration notebook for the full feature importance breakdown.
 
