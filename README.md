@@ -12,6 +12,28 @@ Historical UFC fight data (from Kaggle) is cleaned, de-biased, and turned into 2
 **Phase 2 — Prediction** (`src/scraper.py` → `src/predictor.py` → `predict_fight.py`)
 Given two fighter names, the system scrapes each fighter's current stats live from ufcstats.com, builds the exact same 20 features the model was trained on, and returns a prediction with a confidence score and a full feature breakdown.
 
+```mermaid
+flowchart TD
+    subgraph P1["Phase 1 — Training"]
+        A["Kaggle CSV<br/>raw_historical_fights.csv"] --> B["data_loader.py<br/>load + clean"]
+        B --> C["features.py<br/>engineer 20 features<br/>de-bias fighter order"]
+        C --> D["data/features.csv"]
+        D --> E["train.py<br/>train RandomForest & XGBoost<br/>evaluate, pick the best"]
+        E --> F["models/ufc_predictor_*.pkl"]
+    end
+
+    subgraph P2["Phase 2 — Prediction"]
+        G["User input<br/>two fighter names"] --> H["predict_fight.py"]
+        H --> I["scraper.py<br/>scrape live stats from<br/>ufcstats.com"]
+        I --> J["predictor.py<br/>normalize stats +<br/>build the same 20 features"]
+        J --> K["predictor.py<br/>predict + generate_report"]
+        K --> L["Console output +<br/>predictions/latest_predictions.txt"]
+    end
+
+    F -. loaded by .-> K
+    P1 ~~~ P2
+```
+
 ## Project structure
 
 ```

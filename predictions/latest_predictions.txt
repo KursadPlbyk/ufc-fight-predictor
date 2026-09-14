@@ -1,32 +1,30 @@
-Islam Makhachev vs Jon Jones
+Jon Jones vs Francis Ngannou
 
 Features used for this prediction: 
 
-(A positive value favors Islam Makhachev, a negative value favors Jon Jones)
+(A positive value favors Jon Jones, a negative value favors Francis Ngannou)
 
-  Total Fights (Fighter A): 30.00
-  Total Fights (Fighter B): 29.00
-  Experience Difference (Total Fights): 1.00
+  Total Fights (Fighter A): 29.00
+  Total Fights (Fighter B): 20.00
+  Experience Difference (Total Fights): 9.00
   Win Ratio (Fighter A): 0.97
-  Win Ratio (Fighter B): 0.97
-  Win Ratio Difference: 0.00
-  Significant Strikes Landed per Minute Difference: -2.11
-  Striking Accuracy Difference: 0.00
-  Strikes Absorbed Advantage (fewer absorbed = better): 0.82
-  Striking Defense Difference: -0.03
-  Takedown Average Difference: 1.33
-  Takedown Accuracy Difference: 0.09
-  Takedown Defense Difference: -0.04
-  Submission Average Difference: 0.40
-  Reach Difference (cm): -35.56
-  Height Difference (cm): -15.24
-  Weight Difference (lbs): -78.00
-  Age (Fighter A): 34.88
-  Age (Fighter B): 39.16
-  Age Advantage (younger fighter = better): 4.27
+  Win Ratio (Fighter B): 0.85
+  Win Ratio Difference: 0.12
+  Significant Strikes Landed per Minute Difference: 2.05
+  Striking Accuracy Difference: 0.17
+  Strikes Absorbed Advantage (fewer absorbed = better): -0.08
+  Striking Defense Difference: 0.23
+  Takedown Average Difference: 1.13
+  Takedown Accuracy Difference: -0.17
+  Takedown Defense Difference: 0.24
+  Submission Average Difference: 0.20
+  Reach Difference (cm): 2.54
+  Height Difference (cm): 0.00
+  Weight Difference (lbs): -2.00
+  Age (Fighter A): 39.16
+  Age (Fighter B): 40.02
+  Age Advantage (younger fighter = better): 0.87
 
-Predicted winner: Islam Makhachev (52.0% confidence)
-Islam Makhachev: 52.0%
-Jon Jones: 48.0%
-
-Warning: unusually large height/weight difference for this matchup (bigger than 95% of the historical same-weight-class fights the model was trained on). This looks like a cross-weight-class 'fantasy fight' - treat the prediction with caution.
+Predicted winner: Jon Jones (85.5% confidence)
+Jon Jones: 85.5%
+Francis Ngannou: 14.5%
