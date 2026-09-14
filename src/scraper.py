@@ -72,3 +72,4 @@ if __name__ == "__main__":
     print(f"Stats for {fighter_name}:\n")
     for key, value in stats.items():
         print(f"{key}: {value}")
+

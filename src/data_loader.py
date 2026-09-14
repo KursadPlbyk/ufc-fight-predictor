@@ -88,3 +88,4 @@ if __name__ == "__main__":
         cleaned_data_csv = cleaned_data.to_csv("data/cleaned_fights.csv", index=False)
         print(f"Missing values per column:\n{cleaned_data.isnull().sum().sort_values(ascending=False)}\n") # Display count of missing values in each column    
         print(f"missing values in percentage:\n{(cleaned_data.isnull().mean() * 100).sort_values(ascending=False)}")
+        

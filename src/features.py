@@ -127,3 +127,4 @@ if __name__ == "__main__":
         print(f"Target distribution:\n{features_data['target'].value_counts()}\n")
         features_data.to_csv("data/features.csv", index=False)
         print("Features saved to data/features.csv")
+        

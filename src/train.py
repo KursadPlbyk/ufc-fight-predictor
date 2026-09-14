@@ -184,3 +184,4 @@ if __name__ == "__main__":
     print("Saving the best model...\n")
     joblib.dump(best_model, f'models/ufc_predictor_{best_model_name}_model.pkl')
     print(f"Best model ({best_model_name}) saved to models/ufc_predictor_{best_model_name}_model.pkl\n")
+
