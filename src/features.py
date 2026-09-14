@@ -91,7 +91,9 @@ def engineer_features(file_path):
 
     height_diff = (cleaned_data['f_1_fighter_height_cm'] - cleaned_data['f_2_fighter_height_cm'])
 
-    
+    weight_diff = (cleaned_data['f_1_fighter_weight_lbs'] - cleaned_data['f_2_fighter_weight_lbs'])
+
+
     cleaned_data['total_fights_f1'] = total_fights_f1
     cleaned_data['total_fights_f2'] = total_fights_f2
     cleaned_data['win_ratio_f1'] = win_ratio_f1
@@ -108,6 +110,7 @@ def engineer_features(file_path):
     cleaned_data['sub_avg_diff'] = sub_avg_diff
     cleaned_data['reach_diff'] = reach_diff
     cleaned_data['height_diff'] = height_diff
+    cleaned_data['weight_diff'] = weight_diff
     cleaned_data['age_f1'] = age_f1
     cleaned_data['age_f2'] = age_f2
     cleaned_data['age_diff'] = age_diff

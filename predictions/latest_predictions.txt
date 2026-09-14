@@ -1,0 +1,30 @@
+Jorge Masvidal vs Ben Askren
+
+Features used for this prediction: 
+
+(A positive value favors Jorge Masvidal, a negative value favors Ben Askren)
+
+  Total Fights (Fighter A): 52.00
+  Total Fights (Fighter B): 21.00
+  Experience Difference (Total Fights): 31.00
+  Win Ratio (Fighter A): 0.67
+  Win Ratio (Fighter B): 0.90
+  Win Ratio Difference: -0.23
+  Significant Strikes Landed per Minute Difference: 0.41
+  Striking Accuracy Difference: -0.02
+  Strikes Absorbed Advantage (fewer absorbed = better): 2.61
+  Striking Defense Difference: 0.28
+  Takedown Average Difference: -2.95
+  Takedown Accuracy Difference: 0.04
+  Takedown Defense Difference: 0.72
+  Submission Average Difference: -0.60
+  Reach Difference (cm): 2.54
+  Height Difference (cm): 0.00
+  Weight Difference (lbs): 0.00
+  Age (Fighter A): 41.84
+  Age (Fighter B): 42.16
+  Age Advantage (younger fighter = better): 0.32
+
+Predicted winner: Jorge Masvidal (77.5% confidence)
+Jorge Masvidal: 77.5%
+Ben Askren: 22.5%

@@ -5,4 +5,3 @@ __pycache__/
 .DS_Store
 .idea/
 data/raw_historical_fights.csv
-.claude/
