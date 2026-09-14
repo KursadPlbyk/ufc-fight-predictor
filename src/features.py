@@ -118,4 +118,16 @@ def engineer_features(file_path):
 
 
     return cleaned_data
-        
+
+
+if __name__ == "__main__":
+    raw_data = load_historical_data("data/raw_historical_fights.csv")
+    if raw_data is not None:
+        cleaned_data = clean_data(raw_data)
+        cleaned_data.to_csv("data/cleaned_fights.csv", index=False)
+        print(f"Saved data/cleaned_fights.csv ({cleaned_data.shape[0]} rows, {cleaned_data.shape[1]} columns)")
+
+    features_data = engineer_features("data/raw_historical_fights.csv")
+    if features_data is not None:
+        features_data.to_csv("data/features.csv", index=False)
+        print(f"Saved data/features.csv ({features_data.shape[0]} rows, {features_data.shape[1]} columns)")

@@ -117,3 +117,21 @@ def evaluate_model(model, X_test, y_test):
     }
 
     return metrics
+
+
+if __name__ == "__main__":
+    X, y = load_features('data/features.csv')
+    X_train, X_test, y_train, y_test = split_data(X, y)
+    model1, model2 = train_model(X_train, y_train, X_test, y_test)
+
+    metrics1 = evaluate_model(model1, X_test, y_test)
+    metrics2 = evaluate_model(model2, X_test, y_test)
+
+    if metrics1['accuracy'] > metrics2['accuracy']:
+        best_model, best_model_name, best_metrics = model1, "RandomForest", metrics1
+    else:
+        best_model, best_model_name, best_metrics = model2, "XGBoost", metrics2
+
+    joblib.dump(best_model, f'models/ufc_predictor_{best_model_name}_model.pkl')
+    print(f"Best model: {best_model_name} (accuracy={best_metrics['accuracy']:.4f})")
+    print(f"Saved to models/ufc_predictor_{best_model_name}_model.pkl")
