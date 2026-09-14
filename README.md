@@ -113,7 +113,7 @@ The strongest individual predictor by a clear margin is career **win ratio diffe
 
 ## Exploration notebook
 
-`notebooks/01_exploration.ipynb` is a retrospective walkthrough of the key data investigations behind this project: the CSV-parsing gotcha, the missing-value analysis, the point-in-time and fighter-order data leakage discoveries, feature importance, and the hyperparameter exploration behind `n_estimators=200`. It reuses the real project code from `src/` rather than duplicating logic, so it stays in sync with the pipeline.
+[`notebooks/01_exploration.ipynb`](notebooks/01_exploration.ipynb) is a retrospective walkthrough of the key data investigations behind this project: the CSV-parsing gotcha, the missing-value analysis, the point-in-time and fighter-order data leakage discoveries, feature importance, and the hyperparameter exploration behind `n_estimators=200`. It reuses the real project code from `src/` rather than duplicating logic, so it stays in sync with the pipeline.
 
 ## Tech stack
 
