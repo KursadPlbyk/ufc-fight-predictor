@@ -65,11 +65,3 @@ def get_fighter_current_stats(fighter_fullname):
 
     return stats
 
-if __name__ == "__main__":
-    fighter_name = "Islam Makhachev"
-    print(f"Scraping current stats for {fighter_name}...\n")
-    stats = get_fighter_current_stats(fighter_name)
-    print(f"Stats for {fighter_name}:\n")
-    for key, value in stats.items():
-        print(f"{key}: {value}")
-

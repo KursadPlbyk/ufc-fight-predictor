@@ -49,7 +49,7 @@ UFC Fight Predictor/
    ```
    (`playwright install` downloads a bundled Chromium browser. Needed because ufcstats.com serves a JavaScript anti-bot challenge that a plain HTTP request can't get past.)
 
-2. **Get the historical training data:** Download a UFC historical fights dataset from Kaggle (fighter records, physical stats, and per-fight results for both corners) and save it as `data/raw_historical_fights.csv`.
+2. **Get the historical training data:** Download a UFC historical fights dataset from Kaggle (fighter records, physical stats, and per-fight results for both corners) and save it as `data/raw_historical_fights.csv` (used: https://www.kaggle.com/datasets/scarekrow/ufc-data).
 
 3. **Build the model**: the trained model is *not* committed to this repo (it's a large binary and fully reproducible from code + data), so you need to generate it once:
    ```

@@ -68,24 +68,3 @@ def clean_data(raw_df):
     
 
     return df
-
-if __name__ == "__main__":
-    file_path = "data/raw_historical_fights.csv"
-    historical_data = load_historical_data(file_path)
-    if historical_data is not None:
-        print("Historical data loaded successfully.\n")
-        print(f"Data shape: {historical_data.shape}\n")
-        historical_data.info()  # Display DataFrame info
-        print(f"Missing values per column:\n{historical_data.isnull().sum().sort_values(ascending=False)}\n") # Display count of missing values in each column    
-        print(f"missing values in percentage:\n{(historical_data.isnull().mean() * 100).sort_values(ascending=False)}\n") # Display percentage of missing values in each column
-
-        print("--------------------------------------------------------------------\n")
-
-        print("\nCleaning data...\n")
-        cleaned_data = clean_data(historical_data)
-        print("Data cleaned successfully.\n")
-        print(f"Cleaned data shape: {cleaned_data.shape}\n")
-        cleaned_data_csv = cleaned_data.to_csv("data/cleaned_fights.csv", index=False)
-        print(f"Missing values per column:\n{cleaned_data.isnull().sum().sort_values(ascending=False)}\n") # Display count of missing values in each column    
-        print(f"missing values in percentage:\n{(cleaned_data.isnull().mean() * 100).sort_values(ascending=False)}")
-        

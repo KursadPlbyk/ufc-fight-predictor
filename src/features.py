@@ -118,13 +118,4 @@ def engineer_features(file_path):
 
 
     return cleaned_data
-
-if __name__ == "__main__":
-    file_path = "data/raw_historical_fights.csv"
-    features_data = engineer_features(file_path)
-    if features_data is not None:
-        print(f"Features shape: {features_data.shape}\n")
-        print(f"Target distribution:\n{features_data['target'].value_counts()}\n")
-        features_data.to_csv("data/features.csv", index=False)
-        print("Features saved to data/features.csv")
         

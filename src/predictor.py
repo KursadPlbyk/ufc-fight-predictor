@@ -243,39 +243,3 @@ def generate_report(result):
 
     return "\n".join(lines)
 
-
-if __name__ == "__main__":
-    fighter_a = "Joshua Van"
-    fighter_b = "Alexandre Pantoja"
-
-    print(f"Scraping current stats for {fighter_a}...\n")
-    raw_a = get_fighter_current_stats(fighter_a)
-    print("Raw stats:\n", raw_a)
-    print("\nNormalizing stats...\n")
-    normalized_a = normalize_fighter_stats(raw_a)
-    print("Normalized stats:\n", normalized_a)
-
-    print(f"\n---------------------------------------------------\n")
-
-    print(f"Scraping current stats for {fighter_b}...\n")
-    raw_b = get_fighter_current_stats(fighter_b)
-    print("Raw stats:\n", raw_b)
-    print("\nNormalizing stats...\n")
-    normalized_b = normalize_fighter_stats(raw_b)
-    print("Normalized stats:\n", normalized_b)
-
-    print(f"\n---------------------------------------------------\n")
-
-    print(f"Building feature row for {fighter_a} vs {fighter_b}...\n")
-    feature_row = build_feature_row(normalized_a, normalized_b)
-    print(feature_row.to_string())
-
-    print(f"\n---------------------------------------------------\n")
-
-    print(f"Predicting outcome for {fighter_a} vs {fighter_b}...\n")
-    result = predict_fight_outcome(fighter_a, fighter_b)
-
-    print(f"\n---------------------------------------------------\n")
-
-    print(generate_report(result))
-    

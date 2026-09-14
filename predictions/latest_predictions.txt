@@ -1,30 +1,32 @@
-Jorge Masvidal vs Ben Askren
+Islam Makhachev vs Jon Jones
 
 Features used for this prediction: 
 
-(A positive value favors Jorge Masvidal, a negative value favors Ben Askren)
+(A positive value favors Islam Makhachev, a negative value favors Jon Jones)
 
-  Total Fights (Fighter A): 52.00
-  Total Fights (Fighter B): 21.00
-  Experience Difference (Total Fights): 31.00
-  Win Ratio (Fighter A): 0.67
-  Win Ratio (Fighter B): 0.90
-  Win Ratio Difference: -0.23
-  Significant Strikes Landed per Minute Difference: 0.41
-  Striking Accuracy Difference: -0.02
-  Strikes Absorbed Advantage (fewer absorbed = better): 2.61
-  Striking Defense Difference: 0.28
-  Takedown Average Difference: -2.95
-  Takedown Accuracy Difference: 0.04
-  Takedown Defense Difference: 0.72
-  Submission Average Difference: -0.60
-  Reach Difference (cm): 2.54
-  Height Difference (cm): 0.00
-  Weight Difference (lbs): 0.00
-  Age (Fighter A): 41.84
-  Age (Fighter B): 42.16
-  Age Advantage (younger fighter = better): 0.32
+  Total Fights (Fighter A): 30.00
+  Total Fights (Fighter B): 29.00
+  Experience Difference (Total Fights): 1.00
+  Win Ratio (Fighter A): 0.97
+  Win Ratio (Fighter B): 0.97
+  Win Ratio Difference: 0.00
+  Significant Strikes Landed per Minute Difference: -2.11
+  Striking Accuracy Difference: 0.00
+  Strikes Absorbed Advantage (fewer absorbed = better): 0.82
+  Striking Defense Difference: -0.03
+  Takedown Average Difference: 1.33
+  Takedown Accuracy Difference: 0.09
+  Takedown Defense Difference: -0.04
+  Submission Average Difference: 0.40
+  Reach Difference (cm): -35.56
+  Height Difference (cm): -15.24
+  Weight Difference (lbs): -78.00
+  Age (Fighter A): 34.88
+  Age (Fighter B): 39.16
+  Age Advantage (younger fighter = better): 4.27
 
-Predicted winner: Jorge Masvidal (77.5% confidence)
-Jorge Masvidal: 77.5%
-Ben Askren: 22.5%
+Predicted winner: Islam Makhachev (52.0% confidence)
+Islam Makhachev: 52.0%
+Jon Jones: 48.0%
+
+Warning: unusually large height/weight difference for this matchup (bigger than 95% of the historical same-weight-class fights the model was trained on). This looks like a cross-weight-class 'fantasy fight' - treat the prediction with caution.
